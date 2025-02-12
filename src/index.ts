@@ -4,9 +4,8 @@ import { GoogleSheetsService } from "./services/googleSheetsService.js";
 import { ScheduleManager } from "./services/scheduleManager.js";
 import { WildberriesService } from "./services/wildberriesService.js";
 
-// https://docs.google.com/spreadsheets/d/V1d0d1kxTndXbWhIVXpCWmEzQmpVM0JhYUVkVE1B/edit
-// spreadsheet id -> V1d0d1kxTndXbWhIVXpCWmEzQmpVM0JhYUVkVE1B <- spreadsheet id
-const GOOGLE_SHEETS_IDS: string[] = ["PLACE_YOUR_SPREADSHEET_ID"];
+const GOOGLE_SHEETS_IDS: string[] = process.env.SPREADSHEETS_IDS!.split(",");
+if (!GOOGLE_SHEETS_IDS || GOOGLE_SHEETS_IDS.length < 1) throw new Error("You must add at least one spreadsheet id for this app to work");
 
 async function bootstrap() {
 	const googleSheetsService = new GoogleSheetsService("./google-credentials.json");
