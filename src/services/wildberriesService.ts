@@ -27,16 +27,12 @@ import { BoxRequest } from "../interfaces/Wildberries.js";
  * @property {TariffsBoxResponse} response
  */
 
-/**
- * Retrieves Wildberries box tariffs
- * @returns {Promise<{ boxRequest: BoxRequest } | null>}
- */
 export class WildberriesService {
 	/**
 	 * Retrieves Wildberries box tariffs
-	 * @returns {Promise<{ boxRequest: BoxRequest } | null>}
+	 * @returns {Promise<BoxRequest | null>}
 	 */
-	public async getBoxData(): Promise<{ boxRequest: BoxRequest } | null> {
+	public async getBoxData(): Promise<BoxRequest | null> {
 		try {
 			const queryParam = new Date().toISOString().split("T")[0];
 			if (!queryParam) throw new Error("Invalid query parameter");

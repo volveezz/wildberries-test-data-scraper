@@ -52,7 +52,7 @@ export class DataScraperService {
 			}
 
 			console.info("Formatting WB data...");
-			const formattedData = this.convertTo2DArray(data.boxRequest);
+			const formattedData = this.convertTo2DArray(data);
 			console.info("Data formatting completed");
 
 			await this.wildberriesRepository.storeBoxData(formattedData);

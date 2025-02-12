@@ -5,10 +5,7 @@ export class ScheduleManager {
 	constructor(private service: DataScraperService) {}
 
 	public start() {
-		// 0 1 * * * - every hour at :00
-		// * 1 * * * - every hour
-		// * * * * * - every minute
-		schedule("0 1 * * *", () => this.service.scrape());
+		schedule("0 * * * *", () => this.service.scrape());
 		console.info("Task was scheduled");
 	}
 }
