@@ -7,8 +7,7 @@
 Этот репозиторий предоставляет backend-решение для парсинга тестовых данных с Wildberries API по пути:
 
 ```
-https://dev.wildberries.ru/openapi/wb-tariffs%23tag/Koefficienty-skladov
-
+https://dev.wildberries.ru/openapi/wb-tariffs#tag/Koefficienty-skladov
 ```
 
 Полученные данные сохраняются локально в PostgreSQL и автоматически переносятся в указанные Google Sheets.
