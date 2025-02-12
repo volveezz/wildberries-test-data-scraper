@@ -7,7 +7,7 @@ English | [Русский](https://github.com/volveezz/wildberries-test-data-scr
 This repository offers a backend solution that scrapes data from the Wildberries API endpoint:
 
 ```
-https://dev.wildberries.ru/openapi/wb-tariffs%23tag/Koefficienty-skladov
+https://dev.wildberries.ru/openapi/wb-tariffs#tag/Koefficienty-skladov
 ```
 
 The scraped data is stored locally in a PostgreSQL database and also transferred into predefined Google Sheets.
